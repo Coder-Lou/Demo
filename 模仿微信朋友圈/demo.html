@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+</head>
+<style>
+    html,body,.cover{margin:0;height:100%;width: 100%;}
+    img{height:100px;width:100px;position:relative;display:block;margin:0 auto;}
+    .cover{background-color:rgba(0, 0, 0, 1);position:fixed;top: 0;left:0;display:none;}
+    .bg-animation{animation: bg 0.4s;-webkit-animation: bg 0.4s;display:block !important;}
+@keyframes bg
+    {
+    from {background: rgba(0, 0, 0, 0);}
+    to {background: rgba(0, 0, 0, 1);}
+    }
+@-webkit-keyframes bg /* Safari 和 Chrome */
+    {
+    from {background: rgba(0, 0, 0, 0);}
+    to {background: rgba(0, 0, 0, 1);}
+    }
+</style>
+<body>
+    <img src="img/pb1.jpg" alt="" class='img'>
+    <img src="img/pb2.jpg" alt="" class='img'>
+    <img src="img/pb3.jpg" alt="" class='img'>
+    <img src="img/db4.jpg" alt="" class='img'>
+    <div class="cover"></div>
+</body>
+<script src="preview.js"></script>
+<script>
+    preView.init('.img','.cover');
+</script>
+</html>
